@@ -1,0 +1,14 @@
+{{- if .Values.ingress.enabled -}}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: sample-devops-{{ .Release.Namespace }}-ingress
+  namespace: {{ .Release.Namespace }}
+  annotations:
+    kubernetes.io/ingress.class: "gce"
+    kubernetes.io/ingress.global-static-ip-name: sample-external-ip
+spec:
+  backend:
+    serviceName: {{ .Values.service.name }}
+    servicePort: {{ .Values.service.externalPort }}
+{{- end -}}

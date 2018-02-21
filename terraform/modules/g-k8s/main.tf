@@ -37,3 +37,7 @@ resource "google_container_cluster" "k8s-cluster" {
     }
   }
 }
+
+resource "google_compute_global_address" "public-ip" {
+  name = "${var.ip_name}"
+}

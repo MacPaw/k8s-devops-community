@@ -32,3 +32,7 @@ variable "k8s_disk_size" {
 
 variable "k8s_label_environment" {}
 variable "k8s_lablel_resource" {}
+
+variable "ip_name" {
+  description = "Name for public IP address"
+}

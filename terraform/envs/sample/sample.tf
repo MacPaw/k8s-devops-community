@@ -16,12 +16,12 @@ provider "google" {
 module "k8s-cluster" {
   source = "../../modules/g-k8s"
 
-  k8s_name        = "sample-k8s-env"
+  k8s_name        = "sample-k8s-env-1"
   k8s_description = "k8s cluster used for sample in DevOps community"
 
   k8s_zone        = "us-central1"
   k8s_nodes_count = 2
-  k8s_ipv4_cidr   = "10.100.0.0/16"
+  k8s_ipv4_cidr   = "10.20.0.0/16"
   k8s_disk_size   = 15
 
   k8s_master_username = "kubeadmin"
@@ -29,4 +29,6 @@ module "k8s-cluster" {
 
   k8s_label_environment = "sample"
   k8s_lablel_resource   = "devops-community"
+
+  ip_name = "sample-external-ip"
 }

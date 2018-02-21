@@ -1,0 +1,7 @@
+apiVersion: v1
+description: A Helm chart nginx (frontend) in Kubernetes
+name: nginx
+version: 0.1.5
+maintainers:
+  - name: DevOps team
+icon: https://cdn-1.wp.nginx.com/wp-content/themes/nginx-theme/assets/img/logo.png

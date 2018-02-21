@@ -1,0 +1,13 @@
+replicaCount: 4
+image:
+  repository: library/nginx
+  tag: latest
+  pullPolicy: Always
+service:
+  name: nginx
+  type: NodePort
+  externalPort: 80
+  internalPort: 30080
+ingress:
+  enabled: true
+domain: sample.devops.community
