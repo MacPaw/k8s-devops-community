@@ -10,10 +10,11 @@
  
 ### GKE cluster provision: 
 0. paste your service account key to `terraform/envs/sample/credentials.json`
-1. `cd terraform/envs/sample`
-2. `terraform init`
-3. `terraform get`
-4. `terraform apply`
+1. paste your project name to `terraform/envs/sample/sample.tf`
+2. `cd terraform/envs/sample`
+3. `terraform init`
+4. `terraform get`
+5. `terraform apply`
 
 ### Helm provisioning
 0. connect to cluster using gcloud 
